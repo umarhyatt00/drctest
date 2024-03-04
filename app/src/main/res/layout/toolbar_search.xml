@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+    <LinearLayout
+        android:id="@+id/ll_toolbar_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="100">
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="80">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="100"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                android:background="@drawable/bg_search">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="15"
+                    android:src="@drawable/ic_search_search" />
+                <EditText
+        android:maxLength="@integer/name_max_length"
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="85"
+                    android:textSize="@dimen/text_size_12"
+                    android:hint="@string/search"
+                    android:id="@+id/edt_search"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textColorHint="@color/grayThree"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:background="@drawable/bg_edit_text_null"
+                    android:textColor="@color/textPrimary"/>
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="20">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:textSize="@dimen/text_size_12"
+                android:text="@string/cancel"
+                android:id="@+id/tv_cancel"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="@color/colorPrimary"/>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

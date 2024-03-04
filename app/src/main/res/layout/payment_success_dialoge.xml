@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_dialoge_background"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_tick"
+                android:layout_gravity="center"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Money added successfully in your wallet"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/textPrimary"
+                android:textSize="@dimen/text_size_14"
+                android:fontFamily="@font/roboto_regular"
+                android:id="@+id/tv_title"
+                />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:padding="25dp"
+                android:background="@drawable/bg_background_color">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Added Amount"
+                        android:id="@+id/tv_user_name"
+                        android:textColor="@color/textPrimary"
+                        android:textSize="@dimen/text_size_14" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="350.00 USD"
+                        android:id="@+id/tv_amount"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="26sp" />
+                </LinearLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grayOne" />
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/tv_ok"
+            android:layout_height="wrap_content"
+            android:text="@string/done"
+            android:gravity="center"
+            android:padding="15dp"
+            android:textSize="@dimen/text_size_14"
+            android:textAllCaps="true"
+            android:textColor="@color/colorPrimary"
+            android:fontFamily="@font/roboto_medium"/>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

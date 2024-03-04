@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_size_40">40sp</dimen> <!--40px-->
+    <dimen name="text_size_30">30sp</dimen> <!--30px-->
+    <dimen name="text_size_25">25sp</dimen> <!--25px-->
+    <dimen name="text_size_24">24sp</dimen> <!--25px-->
+    <dimen name="text_size_22">22sp</dimen> <!--22px-->
+    <dimen name="text_size_18">18sp</dimen> <!--18px-->
+    <dimen name="text_size_20">20sp</dimen> <!--20px-->
+    <dimen name="text_size_16">16sp</dimen> <!--16px-->
+    <dimen name="text_size_15">15sp</dimen> <!--15px-->
+    <dimen name="text_size_14">14sp</dimen> <!--14px-->
+    <dimen name="text_size_12">12sp</dimen> <!--12px-->
+    <dimen name="text_size_11">11sp</dimen> <!--11px-->
+    <dimen name="text_size_10">10sp</dimen> <!--10px-->
+    <dimen name="text_size_9">9sp</dimen> <!--10px-->
+
+
+    <dimen name="large_45">45dp</dimen>
+    <dimen name="extra_large_35">35dp</dimen>
+    <dimen name="medium_25">25dp</dimen>
+    <dimen name="extra_medium_20">20dp</dimen>
+    <dimen name="small_15">15dp</dimen>
+    <dimen name="small_13">13dp</dimen>
+    <dimen name="extra_small_10">10dp</dimen>
+
+    <dimen name="radius">25dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+</resources>

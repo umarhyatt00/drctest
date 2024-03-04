@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/ll_main">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="14dp"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:adjustViewBounds="true"
+                android:id="@+id/iv_flag"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_country_logo"/>
+            <TextView
+                android:id="@+id/tv_county_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="English"
+                android:textSize="14sp"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/roboto_medium"
+                android:layout_alignParentLeft="true"
+                android:layout_gravity="center"
+                android:textColor="@color/textPrimary" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_mobile_number_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+211"
+            android:textSize="14sp"
+            android:fontFamily="@font/roboto_medium"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/textPrimary" />
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_checked_blue"
+            android:visibility="invisible" />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:id="@+id/label"
+        android:background="@color/grayOne"
+        android:layout_gravity="center_vertical"/>
+</LinearLayout>
+
+

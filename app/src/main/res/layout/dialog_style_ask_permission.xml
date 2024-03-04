@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layoutDirection="rtl"
+    android:background="@android:color/transparent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@drawable/bg_dialoge_background"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_permission"
+            android:layout_marginTop="20dp"
+            android:padding="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_storage_permission">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/tv_message"
+            android:paddingStart="25dp"
+            android:paddingEnd="25dp"
+            android:paddingBottom="15dp"
+            android:textSize="@dimen/text_size_14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textPrimary"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/to_capture_photos_or_choose_photos_from_the_gallery_allow_yeel_sustenta_access_to_your_camera_tap_settings_permissions_and_turn_camera_on"
+            android:gravity="center">
+
+        </TextView>
+
+        <View
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/grayOne"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="100"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:id="@+id/tv_cancel"
+                android:layout_weight="49"
+                android:layout_height="wrap_content"
+                android:text="@string/not_now"
+                android:gravity="center"
+                android:textSize="@dimen/text_size_14"
+                android:textColor="@color/colorPrimary"
+                android:padding="15dp"
+                android:fontFamily="@font/roboto_medium"/>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:background="@color/grayOne"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:id="@+id/tv_ok"
+                android:layout_weight="49"
+                android:layout_height="wrap_content"
+                android:text="@string/open_settings"
+                android:gravity="center"
+                android:padding="15dp"
+                android:textSize="@dimen/text_size_14"
+                android:textColor="@color/colorPrimary"
+                android:fontFamily="@font/roboto_medium"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

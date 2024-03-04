@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grayOne"
+    tools:context=".activity.main.homepayandsend.SmallCaptureActivity">
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_bottom">
+
+        <com.journeyapps.barcodescanner.DecoratedBarcodeView
+            android:id="@+id/zxing_barcode_scanner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:zxing_preview_scaling_strategy="fitXY"
+            app:zxing_use_texture_view="true">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:id="@+id/rl_head"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:layout_marginTop="20dp">
+
+                    <ImageView
+                        android:id="@+id/iv_browse"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_gravity="center_horizontal"
+                        android:adjustViewBounds="true"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_gallary"
+
+                        />
+                    <ImageView
+                        android:id="@+id/imageButton"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/ic_close_white_new"
+                        android:layout_centerHorizontal="true"
+                        android:padding="15dp"
+                        android:background="@drawable/bg_round_gradient"
+                        />
+                    <ImageView
+                        android:id="@+id/flash_light"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:adjustViewBounds="true"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/ic_flash_off"
+                        android:layout_alignParentEnd="true"
+                        android:padding="10dp" />
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/tv_scan_copy"
+                    android:layout_marginTop="@dimen/extra_large_35"
+                    android:gravity="center"
+                    android:textSize="@dimen/text_size_16"
+                    android:fontFamily="@font/roboto_medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/scan_qr_code_to_pay"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+
+
+        </com.journeyapps.barcodescanner.DecoratedBarcodeView>
+
+    </FrameLayout>
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/black"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/ll_bottom"
+        android:paddingEnd="20dp"
+        android:paddingStart="20dp"
+        android:paddingBottom="50dp"
+        android:paddingTop="50dp"
+        android:layout_marginTop="-50dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="100"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="90"
+                android:id="@+id/ll_mobile">
+                <TextView
+                    android:id="@+id/tv_county_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/country_code"
+                    android:textSize="@dimen/text_size_16"
+                    android:textColor="@color/textPrimary"
+                    android:fontFamily="@font/roboto_medium" />
+                <TextView
+                    android:id="@+id/tv_mobile"
+                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:hint="@string/enter_mobile_number"
+                    android:textSize="@dimen/text_size_16"
+                    android:textColor="@color/textPrimary"
+                    android:fontFamily="@font/roboto_medium"
+                    android:layout_marginStart="5dp"/>
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/rl_browse_contact"
+                android:layout_weight="10">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/ic_browse_contact" />
+            </RelativeLayout>
+
+        </LinearLayout>
+        <View
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/grayOne">
+
+        </View>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.main.cashout.WhatIsCashOutActivity"
+    android:background="@color/white">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/white"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp"
+            app:contentInsetStartWithNavigation="0dp">
+            <include
+                layout="@layout/toolbar_design_white" />
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+    <ScrollView
+        android:layout_below="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/ll_bal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/grayTwo"
+                android:gravity="center"
+                android:paddingEnd="15dp"
+                android:paddingStart="15dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:text="@string/available_balance"
+                    android:textColor="@color/textPrimary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textSize="@dimen/text_size_12"
+                    android:gravity="center"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
+                    >
+                    <TextView
+                        android:text="25,000.00"
+                        android:id="@+id/tv_show_bal_cashOut"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/textPrimary"
+                        android:gravity="center"
+                        android:layout_gravity="bottom"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textSize="@dimen/text_size_30"/>
+
+                    <TextView
+                        android:layout_marginLeft="5dp"
+                        android:id="@+id/tv_currency_symbol"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/textPrimary"
+                        android:gravity="bottom"
+                        android:layout_gravity="bottom"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textSize="12dp"/>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_scan_and_cashOut"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/bg_button_one"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:fontFamily="@font/roboto_medium"
+                    android:padding="15dp"
+                    android:text="@string/scan_and_get_cash"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_16" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="25dp"
+                    android:src="@drawable/ic_what_is_cashout" />
+
+                <TextView
+                    android:layout_marginTop="17dp"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="@string/what_is_cash_out"
+                    android:textColor="@color/textPrimary"
+                    android:textSize="@dimen/text_size_20"/>
+
+                <TextView
+                    android:layout_marginTop="17dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="@dimen/text_size_14"
+                    android:lineSpacingExtra="10dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/you_can_get_cash_by_visiting_any_of_the_yeel_delegates_agents_worldwide_just_scan_the_qr_code_or_enter_the_delegate_agent_code_and_cash_out"/>
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_agentLocator"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/bg_edit_text"
+                    android:orientation="horizontal"
+                    android:padding="15dp">
+
+
+                    <TextView
+                        android:id="@+id/tv_lag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="@string/agent_locator"
+                        android:textColor="@color/textPrimary"
+                        android:textSize="@dimen/text_size_16" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_next_arrow_gray" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+</RelativeLayout>

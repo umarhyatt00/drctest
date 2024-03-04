@@ -1,0 +1,763 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grayTwo"
+    tools:context=".activity.main.agent.cashpickup.history.ToPayConfirmDetailsActivity">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp"
+            app:contentInsetStartWithNavigation="0dp"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <include layout="@layout/toolbar_design_main" />
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/head"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/payment_detail_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+                    <TextView
+                        android:id="@+id/txt_request_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/small_15"
+                        android:layout_marginTop="21dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Requested on 27, Auguest 2021"
+                        android:textColor="@color/textPrimary"
+                        android:textSize="@dimen/text_size_10"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <TextView
+                        android:id="@+id/text_request_amount_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="@string/amount"
+                        android:textAllCaps="true"
+                        android:textColor="@color/textPrimary"
+                        android:textSize="@dimen/text_size_10"
+                        app:layout_constraintEnd_toStartOf="@+id/guide_line_center"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/txt_request_date"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_request_date" />
+
+                    <TextView
+                        android:id="@+id/text_request_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="50,000 SSP"
+                        android:textColor="@color/textPrimary"
+                        android:textSize="@dimen/text_size_14"
+                        app:layout_constraintEnd_toStartOf="@+id/guide_line_center"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/text_request_amount_label"
+                        app:layout_constraintTop_toBottomOf="@+id/text_request_amount_label"
+                        tools:text="50,000 SSP" />
+
+                    <androidx.constraintlayout.widget.Barrier
+                        android:id="@+id/barrierSenderRequest"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:barrierDirection="end"
+                        app:constraint_referenced_ids="guide_line_center"
+                        tools:layout_editor_absoluteX="114dp" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guide_line_center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.5" />
+
+                    <TextView
+                        android:id="@+id/text_request_pickup_details_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/small_15"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="@string/pickup_details"
+                        android:textAllCaps="true"
+                        android:textColor="@color/textPrimary"
+                        android:textSize="@dimen/text_size_10"
+                        app:layout_constraintStart_toStartOf="@+id/text_request_amount"
+                        app:layout_constraintTop_toBottomOf="@+id/text_request_amount" />
+
+                    <TextView
+                        android:id="@+id/text_request_pickup_details"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="20dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/roboto_regular"
+                        android:maxLines="2"
+                        android:text="Adjum Forex Bureau - Juba Town Opp. Bible Society Near Juba Market, Juba,  South Sudan"
+                        android:textColor="@color/textPrimary"
+                        android:textSize="@dimen/text_size_14"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/text_request_pickup_details_label"
+                        app:layout_constraintTop_toBottomOf="@+id/text_request_pickup_details_label"
+                        tools:text="Adjum Forex Bureau - Juba Town Opp. Bible Society Near Juba Market, Juba,  South Sudan" />
+
+
+                    <TextView
+                        android:id="@+id/text_request_ref_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="@string/reff_number"
+                        android:textAllCaps="true"
+                        android:textColor="@color/textPrimary"
+                        android:textSize="@dimen/text_size_10"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toEndOf="@+id/barrierSenderRequest"
+                        app:layout_constraintTop_toTopOf="@+id/text_request_amount_label" />
+
+                    <TextView
+                        android:id="@+id/text_request_ref_number"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="15dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/roboto_regular"
+                        android:maxLines="1"
+                        android:textColor="@color/textPrimary"
+                        android:textSize="@dimen/text_size_14"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/text_request_ref_label"
+                        app:layout_constraintTop_toBottomOf="@+id/text_request_ref_label"
+                        tools:text="1324035049" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:background="@color/grayOne"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/payment_detail_layout" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/addSenderDetailLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/payment_detail_layout">
+
+                    <TextView
+                        android:id="@+id/textSenderDetail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/small_15"
+                        android:layout_marginTop="21dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="@string/sender_details"
+                        android:textAllCaps="true"
+                        android:textColor="@color/textPrimary"
+                        android:textSize="@dimen/text_size_10"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <TextView
+                        android:id="@+id/text_sender_name_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="@string/name"
+                        android:textColor="@color/textSecondary"
+                        android:textSize="@dimen/text_size_10"
+                        app:layout_constraintStart_toStartOf="@+id/textSenderDetail"
+                        app:layout_constraintTop_toBottomOf="@+id/textSenderDetail" />
+
+                    <TextView
+                        android:id="@+id/text_sender_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="15dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/roboto_regular"
+                        android:maxLines="1"
+                        android:text="John Doe"
+                        android:textColor="@color/textPrimary"
+                        android:textSize="@dimen/text_size_14"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/text_sender_name_label"
+                        app:layout_constraintTop_toBottomOf="@+id/text_sender_name_label" />
+
+                    <TextView
+                        android:id="@+id/text_sender_mobile_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/small_15"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="@string/mobile_number"
+                        android:textColor="@color/textSecondary"
+                        android:textSize="@dimen/text_size_10"
+                        app:layout_constraintStart_toStartOf="@+id/text_sender_name"
+                        app:layout_constraintTop_toBottomOf="@+id/text_sender_name" />
+
+                    <TextView
+                        android:id="@+id/text_sender_mobile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:paddingBottom="20dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="+21 454857897"
+                        android:textColor="@color/textPrimary"
+                        android:textSize="@dimen/text_size_14"
+                        app:layout_constraintStart_toStartOf="@+id/text_sender_mobile_label"
+                        app:layout_constraintTop_toBottomOf="@+id/text_sender_mobile_label" />
+
+                    <androidx.constraintlayout.widget.Barrier
+                        android:id="@+id/barrierSender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:barrierDirection="end"
+                        app:constraint_referenced_ids="guideline12"
+                        tools:layout_editor_absoluteX="114dp" />
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.5" />
+                    <TextView
+                        android:id="@+id/text_sender_location_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/small_15"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="@string/location"
+                        android:textColor="@color/textSecondary"
+                        android:textSize="@dimen/text_size_10"
+                        app:layout_constraintStart_toStartOf="@+id/text_sender_mobile"
+                        app:layout_constraintTop_toBottomOf="@+id/text_sender_mobile" />
+
+                    <TextView
+                        android:id="@+id/text_sender_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="20dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/roboto_regular"
+                        android:maxLines="1"
+                       android:text="@string/country_name"
+                        android:textColor="@color/textPrimary"
+                        android:textSize="@dimen/text_size_14"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/text_sender_location_label"
+                        app:layout_constraintTop_toBottomOf="@+id/text_sender_location_label" />
+
+
+                    <TextView
+                        android:id="@+id/text_sender_email_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="@string/email"
+                        android:textColor="@color/textSecondary"
+                        android:textSize="@dimen/text_size_10"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toEndOf="@+id/barrierSender"
+                        app:layout_constraintTop_toTopOf="@+id/text_sender_mobile_label" />
+
+                    <TextView
+                        android:id="@+id/text_sender_email"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="15dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/roboto_regular"
+                        android:maxLines="1"
+                        tools:text="John@gmail.com"
+                        android:textColor="@color/textPrimary"
+                        android:textSize="@dimen/text_size_14"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/text_sender_email_label"
+                        app:layout_constraintTop_toBottomOf="@+id/text_sender_email_label" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:background="@color/grayOne"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/addSenderDetailLayout" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cash_out_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/payment_detail_layout">
+
+                    <TextView
+                        android:id="@+id/txt_cash_out"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/small_15"
+                        android:layout_marginTop="21dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="@string/cash_out_details"
+                        android:textAllCaps="true"
+                        android:textColor="@color/textPrimary"
+                        android:textSize="@dimen/text_size_10"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <TextView
+                        android:id="@+id/text_cash_out_name_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="@string/name"
+                        android:textColor="@color/textSecondary"
+                        android:textSize="@dimen/text_size_10"
+                        app:layout_constraintStart_toStartOf="@+id/txt_cash_out"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_cash_out" />
+
+                    <TextView
+                        android:id="@+id/text_cash_out_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="15dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/roboto_regular"
+                        android:maxLines="1"
+                        android:text="John Doe"
+                        android:textColor="@color/textPrimary"
+                        android:textSize="@dimen/text_size_14"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/text_cash_out_name_label"
+                        app:layout_constraintTop_toBottomOf="@+id/text_cash_out_name_label" />
+
+                    <TextView
+                        android:id="@+id/text_cash_out_mobile_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/small_15"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="@string/mobile_number"
+                        android:textColor="@color/textSecondary"
+                        android:textSize="@dimen/text_size_10"
+                        app:layout_constraintStart_toStartOf="@+id/text_cash_out_name"
+                        app:layout_constraintTop_toBottomOf="@+id/text_cash_out_name" />
+
+                    <TextView
+                        android:id="@+id/text_cash_out_mobile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="16dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="+21 454857897"
+                        android:textColor="@color/textPrimary"
+                        android:textSize="@dimen/text_size_14"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/text_cash_out_mobile_label"
+                        app:layout_constraintTop_toBottomOf="@+id/text_cash_out_mobile_label"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <androidx.constraintlayout.widget.Barrier
+                        android:id="@+id/barrier_cash_out"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:barrierDirection="end"
+                        app:constraint_referenced_ids="guideline10"
+                        tools:layout_editor_absoluteX="114dp" />
+                    
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.5" />
+                    <TextView
+                        android:id="@+id/text_cash_out_location_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/small_15"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="@string/location"
+                        android:textColor="@color/textSecondary"
+                        android:textSize="@dimen/text_size_10"
+                        app:layout_constraintStart_toStartOf="@+id/text_cash_out_mobile"
+                        app:layout_constraintTop_toBottomOf="@+id/text_cash_out_mobile" />
+
+                    <TextView
+                        android:id="@+id/text_cash_out_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="20dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/roboto_regular"
+                        android:maxLines="1"
+                       android:text="@string/country_name"
+                        android:textColor="@color/textPrimary"
+                        android:textSize="@dimen/text_size_14"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/text_cash_out_location_label"
+                        app:layout_constraintTop_toBottomOf="@+id/text_cash_out_location_label" />
+
+
+                    <TextView
+                        android:id="@+id/text_cash_out_email_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="@string/email"
+                        android:textColor="@color/textSecondary"
+                        android:textSize="@dimen/text_size_10"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toEndOf="@+id/barrier_cash_out"
+                        app:layout_constraintTop_toTopOf="@+id/text_cash_out_mobile_label" />
+
+                    <TextView
+                        android:id="@+id/text_cash_out_email"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="15dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/roboto_regular"
+                        android:maxLines="1"
+                        android:text="John@gmail.com"
+                        android:textColor="@color/textPrimary"
+                        android:textSize="@dimen/text_size_14"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/text_cash_out_email_label"
+                        app:layout_constraintTop_toBottomOf="@+id/text_cash_out_email_label" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:id="@+id/view_cash_out"
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:layout_marginBottom="16dp"
+                    android:background="@color/grayOne"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cash_out_layout"
+                    app:layout_constraintVertical_bias="0.0" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/receiver_details_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view2">
+
+                    <TextView
+                        android:id="@+id/text_receiver_Detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/small_15"
+                        android:layout_marginTop="21dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="@string/receiver_details"
+                        android:textAllCaps="true"
+                        android:textColor="@color/textPrimary"
+                        android:textSize="@dimen/text_size_10"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <TextView
+                        android:id="@+id/text_receiver_name_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="@string/name"
+                        android:textColor="@color/textSecondary"
+                        android:textSize="@dimen/text_size_10"
+                        app:layout_constraintStart_toStartOf="@+id/text_receiver_Detail"
+                        app:layout_constraintTop_toBottomOf="@+id/text_receiver_Detail" />
+
+                    <TextView
+                        android:id="@+id/text_receiver_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="15dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/roboto_regular"
+                        android:maxLines="1"
+                        android:text="John Doe"
+                        android:textColor="@color/textPrimary"
+                        android:textSize="@dimen/text_size_14"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/text_receiver_name_label"
+                        app:layout_constraintTop_toBottomOf="@+id/text_receiver_name_label" />
+
+                    <TextView
+                        android:id="@+id/text_receiver_mobile_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/small_15"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="@string/mobile_number"
+                        android:textColor="@color/textSecondary"
+                        android:textSize="@dimen/text_size_10"
+                        app:layout_constraintStart_toStartOf="@+id/text_receiver_name"
+                        app:layout_constraintTop_toBottomOf="@+id/text_receiver_name" />
+
+                    <TextView
+                        android:id="@+id/text_receiver_mobile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="+21 454857897"
+                        android:textColor="@color/textPrimary"
+                        android:textSize="@dimen/text_size_14"
+                        app:layout_constraintStart_toStartOf="@+id/text_receiver_mobile_label"
+                        app:layout_constraintTop_toBottomOf="@+id/text_receiver_mobile_label" />
+
+                    <androidx.constraintlayout.widget.Barrier
+                        android:id="@+id/barrierSender_seder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:barrierDirection="end"
+                        app:constraint_referenced_ids="guideline11"
+                        tools:layout_editor_absoluteX="114dp" />
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.5" />
+                    <TextView
+                        android:id="@+id/text_receiver_location_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/small_15"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="@string/location"
+                        android:textColor="@color/textSecondary"
+                        android:textSize="@dimen/text_size_10"
+                        app:layout_constraintStart_toStartOf="@+id/text_receiver_mobile"
+                        app:layout_constraintTop_toBottomOf="@+id/text_receiver_mobile" />
+
+                    <TextView
+                        android:id="@+id/text_receiver_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="20dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/roboto_regular"
+                        android:maxLines="1"
+                       android:text="@string/country_name"
+                        android:textColor="@color/textPrimary"
+                        android:textSize="@dimen/text_size_14"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/text_receiver_location_label"
+                        app:layout_constraintTop_toBottomOf="@+id/text_receiver_location_label" />
+
+
+                    <TextView
+                        android:id="@+id/text_receiver_email_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="@string/email"
+                        android:textColor="@color/textSecondary"
+                        android:textSize="@dimen/text_size_10"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toEndOf="@+id/barrierSender_seder"
+                        app:layout_constraintTop_toTopOf="@+id/text_receiver_mobile_label" />
+
+                    <TextView
+                        android:id="@+id/text_receiver_email"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="15dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/roboto_regular"
+                        android:maxLines="1"
+                        android:text="John@gmail.com"
+                        android:textColor="@color/textPrimary"
+                        android:textSize="@dimen/text_size_14"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/text_receiver_email_label"
+                        app:layout_constraintTop_toBottomOf="@+id/text_receiver_email_label" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:id="@+id/view3"
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:layout_marginBottom="16dp"
+                    android:background="@color/grayOne"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/receiver_details_layout"
+                    app:layout_constraintVertical_bias="0.0" />
+
+
+                <androidx.constraintlayout.widget.Group
+                    android:id="@+id/group_cash_out"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    app:constraint_referenced_ids="cash_out_layout,view_cash_out" />
+
+                <androidx.constraintlayout.widget.Group
+                    android:id="@+id/group_normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:constraint_referenced_ids="receiver_details_layout,view3,view2,addSenderDetailLayout" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        
+        <TextView
+            android:id="@+id/tv_continue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/small_15"
+            android:layout_marginEnd="@dimen/small_15"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_button_one"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:padding="@dimen/small_13"
+            android:text="@string/continue_label"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_16"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

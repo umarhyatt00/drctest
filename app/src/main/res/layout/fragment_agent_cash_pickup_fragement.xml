@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grayTwo"
+    tools:context=".activity.main.fragments.agent.AgentCashPickupFragment">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:padding="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/title_toolbar_home"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/cash_pickups"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_16"
+            android:visibility="visible" />
+
+        <RelativeLayout
+            android:id="@+id/rl_notification"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="15dp"
+            android:layout_toStartOf="@+id/btn_filter">
+
+            <ImageView
+                android:id="@+id/iv_green_icon"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_ellipse_green_notification"
+                android:visibility="gone" />
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/iv_notification"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_seach"
+                app:tint="@color/white" />
+        </RelativeLayout>
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/btn_filter"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_filter" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_no_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/roboto_regular"
+        android:text="@string/no_cash_pickups"
+        android:visibility="gone"
+        android:textColor="@color/textPrimary"
+        android:textSize="13dp" />
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_below="@+id/relativeLayout"
+        android:id="@+id/swipe_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_cash_pickup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:layout_below="@+id/relativeLayout"
+        android:id="@+id/shimmer_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/shimmer_placeholder_layout_full_cash_pickup_list" />
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+
+</RelativeLayout>

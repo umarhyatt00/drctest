@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="vertical">
+        <RelativeLayout
+            android:id="@+id/rl_title_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:background="@color/grayTwo">
+
+            <TextView
+                android:id="@+id/tv_title_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/roboto_medium"
+                android:text="18 May 2021"
+                android:textColor="@color/textPrimary"
+                android:textSize="@dimen/text_size_10" />
+        </RelativeLayout>
+         <View
+             android:id="@+id/view_under_line"
+             android:layout_width="match_parent"
+             android:layout_height="1dp"
+             android:layout_marginStart="15dp"
+             android:layout_marginEnd="15dp"
+             android:background="@color/grayOne"/>
+         <RelativeLayout
+             android:id="@+id/rl_main"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:padding="15dp">
+            <LinearLayout
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gabrielle Pinto"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textSize="@dimen/text_size_12"
+                    android:textColor="@color/textPrimary"
+                    />
+                <TextView
+                    android:id="@+id/tv_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="18 May 2021, Yeel Cash-Out"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textSize="@dimen/text_size_10"
+                    android:textColor="@color/textPrimary"
+                    />
+            </LinearLayout>
+             <TextView
+                 android:layout_centerVertical="true"
+                 android:id="@+id/tv_amount"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="5000.00 Mt"
+                 android:layout_alignParentEnd="true"
+                 android:fontFamily="@font/roboto_medium"
+                 android:textSize="@dimen/text_size_12"
+                 android:textColor="@color/textPrimary"
+                 />
+         </RelativeLayout>
+
+     </LinearLayout>
+</RelativeLayout>

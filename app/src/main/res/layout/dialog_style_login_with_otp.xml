@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_dialoge_background"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:id="@+id/alert_icon_checked"
+                android:src="@drawable/ic_failed_alert"
+                android:layout_gravity="center" />
+            <TextView
+                android:paddingTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/are_you_sure_you_want_to_clear_all_the_data_which_you_filled_in_you_ll_be_asked_to_start_registration_from_the_beginning_if_you_say_yes"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/textPrimary"
+                android:textSize="@dimen/text_size_14"
+                android:id="@+id/tv_message"
+                />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grayOne" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="100"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tv_close"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/close"
+                android:layout_weight="50"
+                android:gravity="center"
+                android:padding="15dp"
+                android:textSize="@dimen/text_size_14"
+                android:textColor="@color/colorPrimary"
+                android:fontFamily="@font/roboto_medium"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:background="@color/grayOne" />
+            <TextView
+                android:id="@+id/tv_ok"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/login_with_otp"
+                android:layout_weight="50"
+                android:gravity="center"
+                android:padding="15dp"
+                android:textSize="@dimen/text_size_14"
+                android:textColor="@color/colorPrimary"
+                android:fontFamily="@font/roboto_medium"/>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

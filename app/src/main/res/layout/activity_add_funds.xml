@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.main.agent.addfund.AddFundsActivity"
+    android:background="@color/white">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/white"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp"
+            app:contentInsetStartWithNavigation="0dp">
+            <include
+                layout="@layout/toolbar_design_white" />
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+    <LinearLayout
+        android:id="@+id/ll_progress"
+        android:layout_below="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:orientation="horizontal"
+        android:weightSum="6">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="6"
+            android:background="@color/grayTwo"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:padding="@dimen/extra_medium_20"
+        android:layout_below="@+id/ll_progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/add_funds"
+                android:textSize="@dimen/text_size_22"
+                android:textColor="@color/textPrimary"
+                android:fontFamily="@font/roboto_medium"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/about_add_funds"
+                android:textSize="@dimen/text_size_11"
+                android:textColor="@color/textPrimary"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/roboto_regular"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/extra_medium_20"
+                android:layout_marginBottom="10dp"
+                android:weightSum="100">
+
+                <TextView
+                    android:id="@+id/tv_currency_symbol"
+                    android:layout_weight="12"
+                    android:layout_width="0dp"
+                    android:textSize="@dimen/text_size_16"
+                    android:text="USD"
+                    android:textColor="@color/textPrimary"
+                    android:fontFamily="@font/roboto_medium"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/edt_add_funds_amount"
+                    android:layout_weight="85"
+                    android:layout_width="0dp"
+                    android:background="@drawable/edittext_null"
+                    android:hint="@string/enter_amount"
+                    android:textSize="@dimen/text_size_16"
+                    android:inputType="numberDecimal"
+                    android:maxLength="7"
+                    android:textColor="@color/colorPrimary"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textColorHint="@color/grayThree"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/grayOne" />
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/extra_large_35">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/CustomThemeTextInputLayout"
+                    app:errorEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:maxLength="@integer/name_max_length"
+                        android:drawableEnd="@drawable/ic_down_arrow"
+                        android:id="@+id/edt_bank"
+                        android:enabled="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_medium"
+                        android:hint="@string/select_bank"
+                        android:singleLine="true"
+                        android:inputType="textEmailAddress"
+                        android:paddingBottom="@dimen/extra_medium_20"
+                        android:textColor="@color/textPrimary"
+                        android:textSize="@dimen/text_size_14" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_bank"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp" />
+            </RelativeLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_15"
+                android:id="@+id/til_reff_number"
+                app:errorEnabled="true"
+                android:theme="@style/CustomThemeTextInputLayout">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:maxLength="@integer/name_max_length"
+                    android:id="@+id/edt_reff_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:hint="@string/reff_number_if_any"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textColor="@color/textPrimary"
+                    android:paddingBottom="@dimen/extra_medium_20"
+                    android:singleLine="true"
+                    android:textSize="@dimen/text_size_14" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/small_15"
+        android:layout_alignParentBottom="true">
+        <TextView
+            android:layout_marginTop="@dimen/medium_25"
+            android:id="@+id/tv_continue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/continue_label"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_16"
+            android:fontFamily="@font/roboto_medium"
+            android:padding="@dimen/small_13"
+            android:background="@drawable/bg_button_three"/>
+    </LinearLayout>
+</RelativeLayout>

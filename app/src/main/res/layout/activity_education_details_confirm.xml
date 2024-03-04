@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.main.billpayments.internal.EducationDetailsConfirmActivity">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/colorPrimary"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp"
+            app:contentInsetStartWithNavigation="0dp">
+            <include
+                layout="@layout/toolbar_design_main" />
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+    <ScrollView
+        android:layout_below="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:padding="14dp"
+                android:textSize="@dimen/extra_small_10"
+                android:textAllCaps="true"
+                android:textColor="@color/textPrimary"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/your_provider"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/small_15"
+                android:paddingRight="@dimen/small_15">
+
+                <ImageView
+                    android:id="@+id/iv_provider"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerVertical="true"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/provider_image_sample" />
+
+
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/iv_provider"
+                    android:id="@+id/tv_provider_name"
+                    android:layout_width="match_parent"
+                    android:textSize="@dimen/text_size_14"
+                    android:layout_marginStart="@dimen/text_size_14"
+                    android:textColor="@color/textPrimary"
+                    android:fontFamily="@font/roboto_medium"
+                    android:layout_height="wrap_content"
+                    android:text="University of Juba"/>
+
+            </RelativeLayout>
+            <View
+                android:layout_marginTop="@dimen/small_15"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:id="@+id/label"
+                android:background="@color/grayOne"
+                android:layout_gravity="center_vertical"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/small_15"
+                android:textSize="@dimen/extra_small_10"
+                android:textAllCaps="true"
+                android:textColor="@color/textPrimary"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/details"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="100"
+                android:orientation="horizontal"
+
+                android:paddingRight="15dp"
+                android:paddingLeft="15dp">
+
+                <TextView
+                    android:layout_weight="50"
+                    android:layout_width="0dp"
+                    android:textSize="@dimen/text_size_12"
+                    android:textColor="@color/textPrimary"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/student_name"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tvStudentName"
+                    android:layout_weight="50"
+                    android:layout_width="0dp"
+                    android:textSize="@dimen/text_size_12"
+                    android:gravity="right"
+                    android:textColor="@color/textPrimary"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Elizabeth Nyakim"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="100"
+                android:orientation="horizontal"
+                android:paddingRight="15dp"
+                android:paddingTop="@dimen/extra_medium_20"
+                android:paddingLeft="15dp">
+
+                <TextView
+                    android:layout_weight="50"
+                    android:layout_width="0dp"
+                    android:textSize="@dimen/text_size_12"
+                    android:textColor="@color/textPrimary"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/student_id_roll_no"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tvStudentID"
+                    android:layout_weight="50"
+                    android:layout_width="0dp"
+                    android:textSize="@dimen/text_size_12"
+                    android:layout_gravity="end"
+                    android:gravity="end"
+                    android:textColor="@color/textPrimary"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="1474"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="100"
+                android:orientation="horizontal"
+                android:paddingRight="15dp"
+                android:paddingTop="@dimen/medium_25"
+                android:paddingLeft="15dp">
+
+                <TextView
+                    android:layout_weight="50"
+                    android:layout_width="0dp"
+                    android:textSize="@dimen/text_size_12"
+                    android:textColor="@color/textPrimary"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/student_mobile_number"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tvStudentMobile"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_weight="50"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="end"
+                    android:text="+252 8658463"
+                    android:textColor="@color/textPrimary"
+                    android:textSize="@dimen/text_size_12" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="100"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/extra_medium_20"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="@string/amount_payable"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_size_12" />
+
+                <TextView
+                    android:layout_weight="50"
+                    android:layout_width="0dp"
+                    android:textSize="@dimen/text_size_12"
+                    android:layout_gravity="end"
+                    android:gravity="end"
+                    android:textColor="@color/colorPrimary"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="10.00 USD"
+                    android:id="@+id/tv_amount"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_remark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="100"
+                android:orientation="vertical"
+                android:padding="14dp"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_weight="50"
+                    android:layout_width="match_parent"
+                    android:textSize="@dimen/text_size_10"
+                    android:textColor="@color/textPrimary"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="@string/remarks"
+                    android:textAllCaps="true"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tvRemarks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="50"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Water Bill August"
+                    android:textColor="@color/textPrimary"
+                    android:textSize="@dimen/text_size_12" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_button_one"
+                android:clickable="true"
+                android:gravity="center"
+                android:padding="14dp"
+                android:layout_marginTop="30dp"
+                android:layout_margin="15dp"
+                android:text="@string/continue_label"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

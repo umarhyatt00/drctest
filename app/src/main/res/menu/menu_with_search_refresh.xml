@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/id_refresh"
+        app:showAsAction="always"
+        android:title="Refresh"
+        android:icon="@drawable/ic_contact_refresh"/>
+    <item
+        android:id="@+id/id_search"
+        app:showAsAction="always"
+        android:title="Add"
+        android:icon="@drawable/ic_search_white"/>
+</menu>

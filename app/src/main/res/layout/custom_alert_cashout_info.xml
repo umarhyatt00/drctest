@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_dialoge_background"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="40dp"
+            android:paddingBottom="40dp"
+            android:paddingEnd="15dp"
+            android:paddingStart="15dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:id="@+id/info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_info_blue_new" />
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingTop="10dp"
+                    android:text="What is Agent Locator?"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textColor="@color/textPrimary"
+                    android:textSize="@dimen/text_size_14"
+                    android:textAllCaps="true"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:textSize="@dimen/text_size_14"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="@color/textPrimary"
+                android:text="You can add money in your Yeel account or cash out by visiting/call them any of the Yeel Delegates/Agents worldwide."
+                />
+        </LinearLayout>
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/grayOne" />
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="100"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:id="@+id/tv_ok"
+                android:layout_weight="100"
+                android:layout_height="wrap_content"
+                android:text="@string/ok"
+                android:gravity="center"
+                android:padding="20dp"
+                android:textSize="@dimen/text_size_14"
+                android:textColor="@color/colorPrimary"
+                android:fontFamily="@font/roboto_medium" />
+        </LinearLayout>
+      <!--  <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/alert_cashout_btn_"
+            android:layout_height="wrap_content"
+            android:text="@string/ok"
+            android:gravity="center"
+            android:padding="13dp"
+            android:fontFamily="@font/roboto_medium"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/colorPrimary"
+            />
+-->
+    </LinearLayout>
+
+</RelativeLayout>

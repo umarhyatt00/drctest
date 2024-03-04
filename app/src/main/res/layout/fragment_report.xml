@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.main.fragments.ReportFragment"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rl_main">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rl_head"
+            android:background="@color/colorPrimaryDark">
+            <TextView
+                android:id="@+id/title_toolbar_home"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/reports"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/white"
+                android:fontFamily="@font/roboto_medium"
+                android:padding="15dp"
+                android:textSize="@dimen/text_size_16" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_head"
+            android:padding="10dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/select_a_month"
+                android:textSize="@dimen/text_size_14"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/textSecondary"
+                android:fontFamily="@font/roboto_regular"
+                />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_month"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/select_a_year"
+                android:textSize="@dimen/text_size_14"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="@color/textSecondary"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_year"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/btn_download_statement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_button_one"
+                android:clickable="true"
+                android:text="@string/download_statement"
+                android:gravity="center"
+                android:padding="@dimen/text_size_16"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/roboto_medium" />
+
+        </LinearLayout>
+        <TextView
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="20dp"
+            android:layout_alignParentBottom="true"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/note_current_month_statement_will_be_not_generated"
+            android:textColor="@color/textPrimary"
+            android:textSize="@dimen/text_size_12" />
+    </RelativeLayout>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        android:id="@+id/progressBar"/>
+
+
+
+</RelativeLayout>

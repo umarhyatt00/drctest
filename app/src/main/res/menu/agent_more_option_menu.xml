@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_cash_out"
+        android:orderInCategory="100"
+        android:title="@string/cash_out"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_call_to_agent"
+        android:orderInCategory="100"
+        android:title="@string/call_agent"
+        app:showAsAction="never" />
+<!--    <item
+        android:id="@+id/menu_direction"
+        android:orderInCategory="100"
+        android:title="@string/direction"
+        app:showAsAction="never" />-->
+</menu>

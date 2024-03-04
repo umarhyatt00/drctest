@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.main.payme.PayMeActivity"
+    android:background="@color/colorPrimary">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/colorPrimary"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp"
+            app:contentInsetStartWithNavigation="0dp">
+            <include
+                layout="@layout/toolbar_design_main" />
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+    <LinearLayout
+        android:visibility="visible"
+        android:id="@+id/ll_main"
+        android:layout_below="@id/head"
+        android:background="@color/colorPrimary"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="100"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_marginTop="30dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="0dp"
+                    android:theme="@style/Theme.MaterialComponents.Light"
+                    app:strokeColor="@color/white"
+                    app:strokeWidth="02dp">
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:background="@color/white"
+                            android:id="@+id/ll_share"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginTop="25dp">
+
+                            <TextView
+                                android:id="@+id/tv_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="@font/roboto_medium"
+                                android:gravity="center_horizontal"
+                                android:text="JOJO JOSE"
+                                android:textColor="@color/textPrimary"
+                                android:textSize="@dimen/text_size_14" />
+
+                            <TextView
+                                android:layout_marginTop="5dp"
+                                android:id="@+id/edt_mask_Mobile"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_regular"
+                                android:gravity="center_horizontal"
+                                android:text="9947654469"
+                                android:textColor="@color/textSecondary"
+                                android:textSize="@dimen/text_size_12" />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:background="@color/white"
+                                android:padding="25dp">
+
+                                <ImageView
+                                    android:layout_centerHorizontal="true"
+                                    android:id="@+id/iv_qr_code"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:adjustViewBounds="true"
+                                    android:padding="5dp"
+                                    android:src="@drawable/qr_code" />
+                            </RelativeLayout>
+
+                        </LinearLayout>
+                    </RelativeLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <RelativeLayout
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/rl_tv_image"
+                    android:visibility="visible"
+                    android:background="@drawable/white_border_round">
+                    <TextView
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:textSize="@dimen/text_size_18"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true"
+                        android:textAllCaps="true"
+                        android:id="@+id/tv_image"
+                        android:fontFamily="@font/roboto_regular"
+                        android:textColor="@color/textPrimary"
+                        android:text="0"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/rl_iv_image"
+                    android:visibility="gone"
+                    android:background="@drawable/white_round">
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:padding="1dp"
+                        android:id="@+id/tv_logo" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_centerHorizontal="true">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:weightSum="10"
+                    android:padding="15dp"
+                    android:layout_marginEnd="35dp"
+                    android:layout_marginStart="35dp"
+
+                    android:background="@drawable/bg_dialoge_background"
+                    >
+                    <TextView
+                        android:id="@+id/qrcodeTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="QR Code: "
+                        android:gravity="center"
+                        android:textColor="@color/textPrimary"
+                        android:textSize="16sp"
+                        android:layout_gravity="end"
+                        android:fontFamily="@font/roboto_medium"
+                        />
+                    <TextView
+                        android:layout_toEndOf="@id/qrcodeTv"
+                        android:id="@+id/tv_voided_check"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="781-432-678"
+                        android:gravity="center"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/roboto_medium"
+                        />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tvMessage"
+                    android:layout_margin="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tap on the above QR code button to copy the code"
+                    android:gravity="center_horizontal"
+                    android:layout_alignParentStart="true"
+                    android:textSize="@dimen/text_size_12"
+
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/roboto_regular"/>
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

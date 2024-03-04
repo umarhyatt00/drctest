@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_dialoge_background"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="40dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_tick"
+                android:layout_gravity="center"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/payment_successful"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/textPrimary"
+                android:textSize="@dimen/text_size_14"
+                android:fontFamily="@font/roboto_regular"
+                android:id="@+id/tv_title"
+                android:paddingBottom="20dp"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/grayOne">
+
+            </View>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="14dp"
+                android:background="@drawable/bg_background_color">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <TextView
+                            android:layout_weight="5"
+                            android:gravity="left"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/textPrimary"
+                            android:textSize="@dimen/text_size_12"
+                            android:fontFamily="@font/roboto_regular"
+                            android:text="@string/transaction_id"/>
+                        <TextView
+                            android:id="@+id/transaction_id"
+                            android:layout_weight="5"
+                            android:gravity="right"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/textPrimary"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textSize="@dimen/text_size_12"
+                            android:text="1224253656"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        android:weightSum="10">
+
+                        <TextView
+                            android:layout_weight="5"
+                            android:gravity="left"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/textPrimary"
+                            android:textSize="@dimen/text_size_12"
+                            android:fontFamily="@font/roboto_regular"
+                            android:text="@string/provider"/>
+                        <TextView
+                            android:id="@+id/utilityProvider"
+                            android:layout_weight="5"
+                            android:gravity="right"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/textPrimary"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textSize="@dimen/text_size_12"
+                            android:text="NESCOM"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        android:weightSum="10">
+
+                        <TextView
+                            android:layout_weight="5"
+                            android:gravity="left"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/text_size_12"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="Amount Paid"/>
+                        <TextView
+                            android:id="@+id/amountPaid"
+                            android:layout_weight="5"
+                            android:gravity="right"
+                            android:textAllCaps="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorPrimary"
+                            android:fontFamily="@font/roboto_medium"
+                            android:textSize="@dimen/text_size_12"
+                            android:text="10.00 USD"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grayOne">
+
+            </View>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/btn_done"
+            android:layout_height="wrap_content"
+            android:text="@string/done"
+            android:gravity="center"
+            android:padding="14dp"
+            android:textSize="@dimen/text_size_14"
+            android:textAllCaps="true"
+            android:textColor="@color/colorPrimary"
+            android:fontFamily="@font/roboto_medium"/>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

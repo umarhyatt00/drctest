@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/ll_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="10dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/small_15"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/tv_button"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:background="@drawable/bg_label_place_holder"
+                    android:id="@+id/tv_date"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text=" "
+                    android:textColor="@color/textPrimary"
+                    android:textSize="@dimen/text_size_10" />
+
+                <TextView
+                    android:background="@drawable/bg_label_place_holder"
+                    android:id="@+id/tv_message"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text=" "
+                    android:textColor="@color/textPrimary"
+                    android:textSize="@dimen/text_size_14" />
+
+            </LinearLayout>
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tv_button"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/bg_submitted_box"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center"
+                android:maxLines="1"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="@string/submitted"
+                android:textColor="@color/submittedLabelColor"
+                android:textSize="@dimen/text_size_12" />
+
+
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:background="@color/grayOne"/>
+    </LinearLayout>
+  <!--  <RelativeLayout
+        android:id="@+id/rl_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+        <LinearLayout
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:background="@drawable/bg_label_place_holder"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:text=""
+                    android:fontFamily="@font/roboto_medium"
+                    android:textSize="@dimen/text_size_12"
+                    android:textColor="@color/textPrimary"
+                    />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="JOJO"
+                    android:textColor="@color/textPrimary"
+                    android:textSize="@dimen/text_size_12"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+                <TextView
+                    android:background="@drawable/bg_label_place_holder"
+                    android:layout_width="150dp"
+                    android:layout_height="10dp"
+                    android:text=""
+                    android:fontFamily="@font/roboto_regular"
+                    android:textSize="@dimen/text_size_10"
+                    android:textColor="@color/textPrimary"
+                    />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_label_place_holder"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text=""
+                    android:textColor="@color/textPrimary"
+                    android:textSize="@dimen/text_size_10"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/roboto_medium"
+            android:text=""
+            android:textColor="@color/textPrimary"
+            android:textSize="@dimen/text_size_12" />
+    </RelativeLayout>
+    <View
+        android:layout_below="@+id/rl_main"
+        android:id="@+id/view_under_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@color/grayOne"/>-->
+</RelativeLayout>

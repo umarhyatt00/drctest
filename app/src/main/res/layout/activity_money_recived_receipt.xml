@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.main.receipt.credit.MoneyRecivedReceiptActivity"
+    android:background="@color/white"
+    android:id="@+id/rl_main">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/white"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp"
+            app:contentInsetStartWithNavigation="0dp">
+            <include
+                layout="@layout/toolbar_design_white" />
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+    <LinearLayout
+        android:layout_below="@id/head"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible"
+        android:id="@+id/ll_main">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/ll_share"
+                android:background="@color/white">
+
+                <!--Money Send TO-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    android:background="@color/grey"
+                    android:weightSum="150"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="100">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_regular"
+                            android:text="@string/money_received_from"
+                            android:textAllCaps="true"
+                            android:textColor="@color/textPrimary"
+                            android:textSize="@dimen/text_size_10" />
+
+                        <TextView
+                            android:id="@+id/tvReceiverName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="Name"
+                            android:textColor="@color/textPrimary"
+                            android:textSize="@dimen/text_size_16" />
+
+                        <TextView
+                            android:id="@+id/tvReceiverMobile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Mob Number"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@color/textPrimary"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textSize="@dimen/text_size_12" />
+
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_weight="50"
+                        android:layout_width="0dp"
+                        android:gravity="end"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content">
+                        <RelativeLayout
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerVertical="true"
+                            android:id="@+id/rl_tv_image"
+                            android:background="@drawable/blue_round_with_stoke">
+                            <TextView
+                                android:gravity="center"
+                                android:layout_gravity="center"
+                                android:layout_width="wrap_content"
+                                android:textSize="20dp"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_centerHorizontal="true"
+                                android:textAllCaps="true"
+                                android:id="@+id/tv_image"
+                                android:fontFamily="@font/roboto_regular"
+                                android:textColor="@color/white"
+                                android:text="J"/>
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerVertical="true"
+                            android:id="@+id/rl_iv_image"
+                            android:background="@drawable/gray_border_round">
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:padding="1dp"
+                                android:id="@+id/tv_logo" />
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+                <!--Date till remarks-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:id="@+id/tvReceivedDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:text="20 June 2019, 12:00"
+                        android:fontFamily="@font/roboto_regular"
+                        android:textColor="@color/textPrimary"
+                        android:textSize="@dimen/text_size_10" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="30dp"
+                        android:weightSum="100">
+
+                        <LinearLayout
+                            android:layout_weight="50"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="5"
+                                android:gravity="start"
+                                android:text="@string/transaction_id"
+                                android:textAllCaps="true"
+                                android:fontFamily="@font/roboto_regular"
+                                android:textColor="@color/textPrimary"
+                                android:textSize="@dimen/text_size_10" />
+
+                            <TextView
+                                android:id="@+id/tvTransactionId"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="5"
+                                android:gravity="start"
+                                android:layout_marginTop="5dp"
+                                android:text="--------"
+                                android:fontFamily="@font/roboto_regular"
+                                android:textColor="@color/textPrimary"
+                                android:textSize="@dimen/text_size_12" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_weight="50"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="5"
+                                android:gravity="start"
+                                android:text="@string/delivery_method"
+                                android:textAllCaps="true"
+                                android:fontFamily="@font/roboto_regular"
+                                android:textColor="@color/textPrimary"
+                                android:textSize="@dimen/text_size_10" />
+
+                            <TextView
+                                android:id="@+id/tvDeliveryMethod"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="5"
+                                android:gravity="start"
+                                android:layout_marginTop="5dp"
+                                android:text="Yeel Account"
+                                android:fontFamily="@font/roboto_regular"
+                                android:textColor="@color/textPrimary"
+                                android:textSize="@dimen/text_size_12" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="30dp"
+                        android:weightSum="100">
+
+                        <LinearLayout
+                            android:layout_weight="50"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="5"
+                                android:gravity="start"
+                                android:text="@string/receiver_name"
+                                android:textAllCaps="true"
+                                android:fontFamily="@font/roboto_regular"
+                                android:textColor="@color/textPrimary"
+                                android:textSize="@dimen/text_size_10" />
+
+                            <TextView
+                                android:id="@+id/tv_sender_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="5"
+                                android:gravity="start"
+                                android:layout_marginTop="5dp"
+                                android:text="-------"
+                                android:fontFamily="@font/roboto_regular"
+                                android:textColor="@color/textPrimary"
+                                android:textSize="@dimen/text_size_12" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="30dp"
+                        android:id="@+id/ll_remark"
+                        android:visibility="visible"
+                        android:weightSum="100">
+
+                        <LinearLayout
+                            android:layout_weight="50"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+
+                            android:weightSum="10">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="5"
+                                android:gravity="start"
+                                android:text="@string/remarks"
+                                android:textAllCaps="true"
+                                android:fontFamily="@font/roboto_regular"
+                                android:textColor="@color/textPrimary"
+                                android:textSize="@dimen/text_size_10" />
+
+                            <TextView
+                                android:id="@+id/tv_remarks"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="5"
+                                android:fontFamily="@font/roboto_regular"
+                                android:text="----------"
+                                android:textColor="@color/textPrimary"
+                                android:textSize="@dimen/text_size_12" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+                <!-- <View
+                     android:layout_width="match_parent"
+                     android:layout_height="5dp"
+                     android:background="F1F7FD"/>-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/grayTwo">
+
+                </View>
+
+
+                <!--Amount and Commission-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:gravity="start"
+                            android:text="@string/received_amount"
+                            android:fontFamily="@font/roboto_medium"
+                            android:textColor="@color/textPrimary"
+                            android:textSize="@dimen/text_size_14" />
+
+                        <TextView
+                            android:id="@+id/tvTotalToPay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:gravity="end"
+                            android:text="0.00 AUD"
+                            android:fontFamily="@font/roboto_medium"
+                            android:textColor="@color/textPrimary"
+                            android:textSize="@dimen/text_size_14"
+                            />
+
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:layout_marginBottom="20dp">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/ic_yeel_send_bottom_logo"
+            android:layout_gravity="center"
+            />
+
+    </LinearLayout>
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
+</RelativeLayout>

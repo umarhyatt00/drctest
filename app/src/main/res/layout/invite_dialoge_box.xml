@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_dialoge_background"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="@dimen/extra_medium_20"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_heading"
+                android:padding="@dimen/small_15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Your contact Wade Bell is not on the Yeel, Send invite to Yeel"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/textPrimary"
+                android:textSize="@dimen/text_size_14"
+                android:fontFamily="@font/roboto_regular" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="25dp"
+                android:layout_marginTop="@dimen/extra_small_10"
+                android:background="@drawable/bg_background_color">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:orientation="vertical">
+                    <RelativeLayout
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/blue_round">
+                        <TextView
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:textSize="@dimen/text_size_18"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_centerHorizontal="true"
+                            android:textAllCaps="true"
+                            android:id="@+id/tv_first_letter"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textColor="@color/white"
+                            android:text="J"/>
+
+                    </RelativeLayout>
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Wade Bell"
+                        android:id="@+id/tv_name"
+                        android:textColor="@color/textPrimary"
+                        android:textSize="@dimen/text_size_16" />
+                    <TextView
+                        android:id="@+id/tv_mobile_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="(303) 555-0105"
+                        android:textColor="@color/textSecondary"
+                        android:textSize="@dimen/text_size_12" />
+                </LinearLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/grayOne"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="100.1"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:id="@+id/tv_cancel"
+                android:layout_weight="50"
+                android:layout_height="wrap_content"
+                android:text="@string/cancel"
+                android:gravity="center"
+                android:padding="15dp"
+                android:textSize="@dimen/text_size_14"
+                android:textColor="@color/colorPrimary"
+                android:fontFamily="@font/roboto_medium" />
+            <View
+                android:layout_weight=".1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@color/grayOne"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:id="@+id/tv_invite"
+                android:layout_weight="50"
+                android:layout_height="wrap_content"
+                android:text="@string/invite_now"
+                android:gravity="center"
+                android:padding="15dp"
+                android:textSize="@dimen/text_size_14"
+                android:textColor="@color/colorPrimary"
+                android:fontFamily="@font/roboto_medium" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

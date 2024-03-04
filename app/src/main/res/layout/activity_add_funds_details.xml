@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.main.agent.addfund.AddFundsDetailsActivity"
+    android:background="@color/grayTwo">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/white"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp"
+            app:contentInsetStartWithNavigation="0dp">
+            <include
+                layout="@layout/toolbar_design_white" />
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+    <LinearLayout
+        android:layout_below="@id/head"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible"
+        android:id="@+id/ll_main">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/ll_share"
+                android:background="@color/white">
+
+
+                <!--Date till remarks-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:id="@+id/tv_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Submitted on 27, Aug 2021"
+                        android:textColor="@color/textPrimary"
+                        android:textSize="@dimen/text_size_10" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="30dp"
+                        android:weightSum="100">
+
+                        <LinearLayout
+                            android:layout_weight="50"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="5"
+                                android:gravity="start"
+                                android:text="Amount"
+                                android:textAllCaps="true"
+                                android:fontFamily="@font/roboto_regular"
+                                android:textColor="@color/textPrimary"
+                                android:textSize="@dimen/text_size_10" />
+
+                            <TextView
+                                android:id="@+id/tv_amount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="5"
+                                android:gravity="start"
+                                android:layout_marginTop="5dp"
+                                android:text="200,000 TRY"
+                                android:fontFamily="@font/roboto_regular"
+                                android:textColor="@color/textPrimary"
+                                android:textSize="@dimen/text_size_14" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_weight="50"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="5"
+                                android:gravity="start"
+                                android:text="Bank"
+                                android:textAllCaps="true"
+                                android:fontFamily="@font/roboto_regular"
+                                android:textColor="@color/textPrimary"
+                                android:textSize="@dimen/text_size_10" />
+
+                            <TextView
+                                android:id="@+id/tv_bank_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="5"
+                                android:gravity="start"
+                                android:layout_marginTop="5dp"
+                                android:text="Bank of America"
+                                android:fontFamily="@font/roboto_regular"
+                                android:textColor="@color/textPrimary"
+                                android:textSize="@dimen/text_size_14" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/ll_ref_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="30dp"
+                        android:weightSum="100">
+
+                        <LinearLayout
+                            android:layout_weight="50"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="5"
+                                android:gravity="start"
+                                android:text="Reff. Number"
+                                android:textAllCaps="true"
+                                android:fontFamily="@font/roboto_regular"
+                                android:textColor="@color/textPrimary"
+                                android:textSize="@dimen/text_size_10" />
+
+                            <TextView
+                                android:id="@+id/tv_ref_number"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="5"
+                                android:gravity="start"
+                                android:layout_marginTop="5dp"
+                                android:text="1324035049"
+                                android:fontFamily="@font/roboto_regular"
+                                android:textColor="@color/textPrimary"
+                                android:textSize="@dimen/text_size_14" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="30dp"
+                        android:id="@+id/ll_remark"
+                        android:visibility="visible"
+                        android:weightSum="100">
+
+                        <LinearLayout
+                            android:layout_weight="100"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="5"
+                                android:gravity="start"
+                                android:text="Status"
+                                android:textAllCaps="true"
+                                android:fontFamily="@font/roboto_regular"
+                                android:textColor="@color/textPrimary"
+                                android:textSize="@dimen/text_size_10" />
+
+                            <TextView
+                                android:id="@+id/tv_status"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="5"
+                                android:fontFamily="@font/roboto_medium"
+                                android:text="Approved - funds deposited on 28, Aug 2021"
+                                android:textColor="@color/green"
+                                android:textSize="@dimen/text_size_14" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="30dp"
+                        android:visibility="visible"
+                        android:weightSum="100">
+
+                        <LinearLayout
+                            android:layout_weight="100"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="5"
+                                android:gravity="start"
+                                android:text="Bank Reciept Photo"
+                                android:textAllCaps="true"
+                                android:fontFamily="@font/roboto_regular"
+                                android:textColor="@color/textPrimary"
+                                android:textSize="@dimen/text_size_10" />
+
+                            <ImageView
+                                android:id="@+id/iv_photo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/rectangle"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/grayOne"/>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
+</RelativeLayout>

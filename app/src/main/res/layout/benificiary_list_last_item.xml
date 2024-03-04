@@ -1,0 +1,54 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:id="@+id/ll_main"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_name"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/blue_round"
+                />
+            <ImageView
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_benefiary_all"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/tv_icon"
+                />
+        </RelativeLayout>
+
+        <TextView
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="75dp"
+            android:textSize="@dimen/text_size_12"
+            android:id="@+id/tv_name"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textPrimary"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/all_contacts"/>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+
+
+
+

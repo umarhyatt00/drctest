@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/colorPrimary"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp"
+            app:contentInsetStartWithNavigation="0dp">
+            <include
+                layout="@layout/toolbar_design_main" />
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+    <ScrollView
+        android:layout_below="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/small_15">
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/small_15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/til_first_name"
+                    app:errorEnabled="true"
+                    android:layout_weight="47"
+                    android:background="@color/white"
+                    android:theme="@style/CustomThemeTextInputLayout">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edt_first_name"
+                        android:maxLength="@integer/name_max_length"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:hint="@string/first_name"
+                        android:text="John"
+                        android:singleLine="true"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textColor="@color/textPrimary"
+                        android:paddingBottom="@dimen/extra_medium_20"
+                        android:textSize="@dimen/text_size_14"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="5dp"
+                    android:layout_weight="6">
+
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_middle_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:errorEnabled="true"
+                    android:layout_weight="47"
+                    android:theme="@style/CustomThemeTextInputLayout">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:maxLength="@integer/name_max_length"
+                        android:id="@+id/edt_middle_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:hint="@string/middle_name"
+                        android:text="Michael"
+                        android:singleLine="true"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textColor="@color/textPrimary"
+                        android:paddingBottom="@dimen/extra_medium_20"
+                        android:textSize="@dimen/text_size_14" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_last_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_15"
+                app:errorEnabled="true"
+                android:theme="@style/CustomThemeTextInputLayout">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:maxLength="@integer/name_max_length"
+                    android:id="@+id/edt_last_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:hint="@string/last_name"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textColor="@color/textPrimary"
+                    android:text="Doe"
+                    android:singleLine="true"
+                    android:paddingBottom="@dimen/extra_medium_20"
+                    android:textSize="@dimen/text_size_14" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="100"
+                android:layout_marginTop="@dimen/small_15"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="20"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/ic_country_logo" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/country_code"
+                            android:layout_marginStart="5dp"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/roboto_medium"
+                            android:textSize="@dimen/text_size_14"
+                            android:textColor="@color/textPrimary"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="2dp"
+                    android:layout_weight="5">
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="75"
+                    android:orientation="vertical">
+                    <EditText
+        android:maxLength="@integer/name_max_length"
+                        android:id="@+id/edt_mobile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_edit_text_null"
+                        android:fontFamily="@font/roboto_medium"
+                        android:hint="@string/mobile_number"
+                        android:inputType="phone"
+                        android:text="84 5550109"
+                        android:importantForAutofill="no"
+                        android:paddingTop="@dimen/small_15"
+                        android:textColor="@color/textPrimary"
+                        android:paddingBottom="@dimen/small_15"
+                        android:textColorHint="@color/grayThree"
+                        android:textSize="@dimen/text_size_14"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="100"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="20"
+                    android:orientation="vertical">
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/grayOne"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="5dp"
+                    android:layout_weight="5">
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="75"
+                    android:orientation="vertical">
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/grayOne"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_15"
+                android:id="@+id/til_email"
+                app:errorEnabled="true"
+                android:theme="@style/CustomThemeTextInputLayout">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:maxLength="@integer/name_max_length"
+                    android:id="@+id/edt_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:hint="@string/email"
+                    android:singleLine="true"
+                    android:text="johndoe18@gmail.com"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textColor="@color/textPrimary"
+                    android:paddingBottom="@dimen/extra_medium_20"
+                    android:textSize="@dimen/text_size_14" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_marginTop="@dimen/small_15"
+                android:id="@+id/til_locality"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/CustomThemeTextInputLayout"
+                app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_locality"
+                    android:maxLength="@integer/name_max_length"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:hint="@string/locality"
+                    android:inputType="textEmailAddress"
+                    android:text="B-301, Queens Gate"
+                    android:paddingBottom="@dimen/extra_medium_20"
+                    android:singleLine="true"
+                    android:textColor="@color/textPrimary"
+                    android:textSize="@dimen/text_size_14" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/extra_medium_20">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/CustomThemeTextInputLayout"
+                    app:errorEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:drawableEnd="@drawable/ic_down_arrow"
+                        android:maxLength="@integer/name_max_length"
+                        android:id="@+id/edt_provinces"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_medium"
+                        android:hint="@string/provinces"
+                        android:inputType="textEmailAddress"
+                        android:text="Maputo City"
+                        android:singleLine="true"
+                        android:paddingBottom="@dimen/extra_medium_20"
+                        android:textColor="@color/textPrimary"
+                        android:textSize="@dimen/text_size_14" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <RelativeLayout
+                    android:id="@+id/rl_provinces"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_15">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/CustomThemeTextInputLayout"
+                    app:errorEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:maxLength="@integer/name_max_length"
+                        android:drawableEnd="@drawable/ic_down_arrow"
+                        android:id="@+id/edt_district"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_medium"
+                        android:hint="@string/district"
+                        android:inputType="textEmailAddress"
+                        android:text="Maputo"
+                        android:singleLine="true"
+                        android:paddingBottom="@dimen/extra_medium_20"
+                        android:textColor="@color/textPrimary"
+                        android:textSize="@dimen/text_size_14" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <RelativeLayout
+                    android:id="@+id/rl_district"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"/>
+            </RelativeLayout>
+
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

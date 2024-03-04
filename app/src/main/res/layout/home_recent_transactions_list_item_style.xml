@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/ll_main"
+        android:background="@color/white">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            android:paddingTop="@dimen/small_15"
+            android:paddingBottom="@dimen/small_15">
+            <RelativeLayout
+                android:layout_weight="17"
+                android:layout_width="0dp"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:layout_weight="4"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/gray_round">
+                    <ImageView
+                        android:id="@+id/ivProfileImage"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:padding="1dp"
+                        android:src="@drawable/gray_round"/>
+
+                    <TextView
+                        android:id="@+id/tvFirstLetter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/roboto_regular"
+                        android:gravity="center"
+                        android:text=""
+                        android:textAllCaps="true"
+                        android:textColor="@color/textPrimary"
+                        android:textSize="17dp" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="83">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginEnd="3dp"
+                        android:layout_toStartOf="@+id/tv_amount"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="start"
+                        android:text="Yasmin Warsame Yasmin Warsame Yasmin Warsame"
+                        android:textColor="@color/textPrimary"
+                        android:textSize="@dimen/text_size_12" />
+
+                    <TextView
+                        android:id="@+id/tv_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="- 350 USD"
+                        android:gravity="end"
+                        android:textColor="@color/textPrimary"
+                        android:textSize="@dimen/text_size_12" />
+                </RelativeLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp">
+                    <ImageView
+                        android:id="@+id/iv_round"
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_ellipse_green"/>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/tv_message"
+                            android:text="Message"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/textPrimary"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textSize="@dimen/text_size_10"
+                            android:layout_gravity="center_vertical"
+                            />
+                        <TextView
+                            android:id="@+id/tv_date"
+                            android:text="Date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/textPrimary"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textSize="@dimen/text_size_10"
+                            android:layout_gravity="center_vertical"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grayOne"
+            />
+
+    </LinearLayout>
+</RelativeLayout>

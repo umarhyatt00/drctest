@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.main.settings.GetHelpActivity"
+    android:background="@color/grayTwo">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/colorPrimary"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp"
+            app:contentInsetStartWithNavigation="0dp">
+            <include
+                layout="@layout/toolbar_design_main" />
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+    <LinearLayout
+        android:layout_below="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="15dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/app_related_queries"
+                android:textSize="@dimen/text_size_16"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="@color/textPrimary"
+                >
+            </TextView>
+
+            <TextView
+                android:id="@+id/tvChat"
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:text="@string/chat_via_whatsapp"
+                android:textAlignment="viewStart"
+                android:drawablePadding="10dp"
+                android:textSize="@dimen/text_size_16"
+                android:textColor="@color/colorPrimary"
+                android:fontFamily="@font/roboto_medium"
+                android:background="@drawable/btn_with_grey_boarder"
+                app:drawableStartCompat="@drawable/ic_chat_whatsapp" />
+            <TextView
+                android:id="@+id/tvEmail"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:text="@string/email_us_at_hello_yeel_app"
+                android:textAlignment="viewStart"
+                android:drawablePadding="10dp"
+                android:textSize="@dimen/text_size_16"
+                android:textColor="@color/colorPrimary"
+                android:fontFamily="@font/roboto_medium"
+                android:background="@drawable/btn_with_grey_boarder"
+                app:drawableStartCompat="@drawable/ic_icon_email" />
+            
+
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginBottom="15dp"
+            android:background="@color/grayOne"/>
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="start"
+                android:text="@string/customer_service_hours"
+                android:textColor="@color/textPrimary"
+                android:textSize="@dimen/text_size_16" />
+            <TextView
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textSecondary"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="@dimen/text_size_12"
+                android:text="@string/timing"/>
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/monday_to_friday_7_00_am_to_5_30_pm"
+                android:textColor="@color/textPrimary"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="@dimen/text_size_16"
+                android:gravity="start"
+                >
+
+            </TextView>
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/saturday_8_00_am_to_2_00_pm"
+                android:textColor="@color/textPrimary"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="@dimen/text_size_16"
+                android:gravity="start"
+                >
+
+            </TextView>
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textPrimary"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="@dimen/text_size_12"
+                android:lineSpacingExtra="5dp"
+                android:text="@string/please_call_211_923_614_400_to_contact_customer_service_with_any_issues_or_concerns"/>
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:id="@+id/tvCallNow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:text="@string/call_now"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_16"
+                android:fontFamily="@font/roboto_medium"
+                android:drawablePadding="10dp"
+                android:padding="15dp"
+                android:background="@drawable/bg_button_one"
+                app:drawableStartCompat="@drawable/ic_call_white"
+                android:focusable="true" />
+
+            <TextView
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textPrimary"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="@dimen/text_size_12"
+                android:lineSpacingExtra="5dp"
+                android:paddingBottom="10dp"
+                android:text="@string/excluding_all_national_holidays"/>
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+
+            android:background="@color/grayOne"/>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

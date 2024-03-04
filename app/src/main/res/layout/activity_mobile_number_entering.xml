@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.main.homepayandsend.MobileNumberEnteringActivity"
+    android:background="@color/white">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/white"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp"
+            app:contentInsetStartWithNavigation="0dp">
+            <include
+                layout="@layout/toolbar_design_white" />
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+    <LinearLayout
+        android:layout_below="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/small_15"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_toStartOf="@+id/imgBrowse">
+                <TextView
+                    android:id="@+id/tv_county_code"
+                    android:layout_width="wrap_content"
+                    android:text="@string/country_code"
+                    android:textSize="@dimen/text_size_16"
+                    android:textColor="@color/textPrimary"
+                    android:fontFamily="@font/roboto_medium"
+                    android:paddingTop="@dimen/small_15"
+                    android:paddingBottom="@dimen/small_15"
+                    android:layout_height="match_parent"/>
+                <EditText
+        android:maxLength="@integer/name_max_length"
+                    android:layout_marginStart="10dp"
+                    android:id="@+id/maskedEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_edit_text_null"
+                    android:fontFamily="@font/roboto_medium"
+                    android:hint="@string/enter_mobile_number"
+                    android:inputType="phone"
+                    android:paddingTop="@dimen/small_15"
+                    android:importantForAutofill="no"
+                    android:textColor="@color/textPrimary"
+                    android:paddingBottom="@dimen/small_15"
+                    android:textColorHint="@color/grayThree"
+                    android:textSize="@dimen/text_size_16"
+
+                    />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imgBrowse"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_browse_contact">
+
+            </ImageView>
+
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/grayOne"/>
+        <TextView
+            android:id="@+id/tv_error"
+            android:fontFamily="@font/roboto_regular"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Error message"
+            android:textSize="@dimen/text_size_10"
+            android:textColor="@color/red"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imgContinue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:src="@drawable/ic_img_failed_btn" />
+
+</RelativeLayout>
